@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Kruti Dev 714';
+    src: url('Kruti-Dev714.woff2') format('woff2'),
+        url('Kruti-Dev714.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Phoenix Extended N';
+    src: url('PhoenixExtendedNormal.woff2') format('woff2'),
+        url('PhoenixExtendedNormal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppl Exquisit MN';
+    src: url('PopplExquisitMN-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
