@@ -124,25 +124,38 @@ canvas {
   <tr>
     <td>Kruti Dev 714</td>
     <td><canvas class="xx" id='textCanvas' height=65></canvas>
-<img id='Kruti Dev 714'></td>
+<img id='Kruti Dev 714'>
+
+<a href="#" class="button" id="btnDownload1" download="canvas.png">Download PNG</a>
+</td>
     
   </tr>
   <tr>
     <td>Phoenix Extended N</td>
     <td><canvas class="xx" id='textCanvas' height=65></canvas>
-<img id='Phoenix Extended N'></td>
+<img id='Phoenix Extended N'>
+<a href="#" class="button" id="btnDownload2" download="canvas.png">Download PNG</a>
+</td>
+
+
   
   </tr>
   <tr>
     <td>Poppl Exquisit MN</td>
     <td><canvas class="xx" id='textCanvas' height=65></canvas>
-<img id='Poppl Exquisit MN'></img></td>
+<img id='Poppl Exquisit MN'></img>
+<a href="#" class="button" id="btnDownload3" download="canvas.png">Download PNG</a>
+</td>
    
   </tr>
 </table>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="colorPick.js"></script>  
 <script>
+
+  const btnDownload1 = document.querySelector("#btnDownload1");
+  const btnDownload2 = document.querySelector("#btnDownload2");
+  const btnDownload3 = document.querySelector("#btnDownload3");
     	$("#picker1").colorPick({
 			'initialColor' : '#000000',
 			'palette': ["#000000","#1abc9c", "#16a085", "#2ecc71", "#27ae60", "#3498db", "#2980b9", "#9b59b6", "#8e44ad", "#34495e", "#2c3e50", "#f1c40f", "#f39c12", "#e67e22", "#d35400", "#e74c3c", "#c0392b", "#ecf0f1"],
@@ -167,9 +180,14 @@ document.fonts.load(font1)
       hindi.font = font1;
       // set the color only now
       hindi.fillStyle = selectedColor;
-      font1.fontsize(1);
       hindi.fillText(this.value,0,50);
       imagehindi.src = hindi.canvas.toDataURL();
+      
+      btnDownload1.addEventListener("click",function(){
+        const dataURI = imagehindi.src;
+        btnDownload1.href = dataURI;
+      })
+
     }, false);
   });
 
@@ -192,6 +210,11 @@ document.fonts.load(font2)
       Phoenix.fillStyle = selectedColor;
       Phoenix.fillText(this.value, 0, 50);
       imagePhoenix.src = Phoenix.canvas.toDataURL();
+
+      btnDownload2.addEventListener("click",function(){
+        const dataURI = imagePhoenix.src;
+        btnDownload2.href = dataURI;
+      })
     }, false);
   });
 
@@ -213,6 +236,11 @@ document.fonts.load(font3)
       Poppl.fillStyle = selectedColor;
       Poppl.fillText(this.value, 0, 50);
       imagePoppl.src = Poppl.canvas.toDataURL();
+
+      btnDownload3.addEventListener("click",function(){
+        const dataURI = imagePoppl.src;
+        btnDownload3.href = dataURI;
+      })
     }, false);
   });
 
